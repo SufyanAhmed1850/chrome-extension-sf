@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "chrome-extension-sf",
+    "version": "0.0.1",
+    "description": "Chrome Extension SF is a powerful browser extension designed to enhance user experience and automate certain tasks on specific websites. This extension is particularly useful for managing cases and activities within a Salesforce-like environment.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                Add URL here
+            ],
+            "js": ["content.js"]
+        },
+        {
+            "matches": [
+                Add URL here
+            ],
+            "js": ["panda.js"]
+        }
+    ],
+    "permissions": ["activeTab", "debugger", "scripting", "tabs"],
+    "icons": {
+        "128": "icon.png"
+    }
+}
